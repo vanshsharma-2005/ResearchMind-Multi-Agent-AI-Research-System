@@ -561,3 +561,71 @@ if not st.session_state.results and not st.session_state.running:
         </div>
     </div>
     """, unsafe_allow_html=True)
+
+
+# ── Footer ───────────────────────────────────────────────────────────────────
+st.markdown("""
+<style>
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14px 0;
+    text-align: center;
+    background: linear-gradient(180deg, transparent, #0a0a0f 60%);
+    z-index: 999;
+}
+.footer-inner {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #0f0f18;
+    border: 1px solid #2a2a3d;
+    border-radius: 30px;
+    padding: 8px 22px;
+    box-shadow: 0 0 20px #e8c54715;
+}
+.footer-line {
+    width: 30px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e8c547);
+}
+.footer-line.right {
+    background: linear-gradient(90deg, #e8c547, transparent);
+}
+.footer-text {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #5a5a6a;
+}
+.footer-text span {
+    color: #e8c547;
+    font-weight: 500;
+}
+.footer-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #e8c547;
+    box-shadow: 0 0 8px #e8c547;
+    animation: glow 2s ease-in-out infinite;
+}
+@keyframes glow {
+    0%, 100% { opacity: 1; box-shadow: 0 0 8px #e8c547; }
+    50%       { opacity: 0.4; box-shadow: 0 0 3px #e8c547; }
+}
+</style>
+
+<div class="footer">
+    <div class="footer-inner">
+        <div class="footer-line"></div>
+        <div class="footer-dot"></div>
+        <div class="footer-text">Created by &nbsp;<span>Vansh Sharma</span></div>
+        <div class="footer-dot"></div>
+        <div class="footer-line right"></div>
+    </div>
+</div>
+""", unsafe_allow_html=True)
